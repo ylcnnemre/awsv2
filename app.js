@@ -10,4 +10,11 @@ app.get("/",(req,res)=>{
 
 })
 
+app.get("/test",(req,res)=>{
+
+    res.send("merhabadsads")
+
+})
+
+
 app.listen(3000)
