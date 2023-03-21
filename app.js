@@ -11,7 +11,7 @@ app.get("/",(req,res)=>{
 
 })
 
-/* app.get("/add",async (req,res)=>{
+app.get("/add",async (req,res)=>{
 
    await TestModel.insertMany([{
         "name" : Math.random().toString(),
@@ -24,7 +24,7 @@ app.get("/",(req,res)=>{
 
 })
 
-app.get("/getvalue",(req,res)=>{
+/* app.get("/getvalue",(req,res)=>{
 
      TestModel.find().then(val =>{
         res.send(val)
@@ -34,8 +34,8 @@ app.get("/getvalue",(req,res)=>{
         })
      })
 
-})
- */
+}) */
+
 app.get("/test",(req,res)=>{
 
     res.send("merhabadsads")
