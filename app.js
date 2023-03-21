@@ -47,5 +47,5 @@ app.get("/ses",(req,res)=>{
 })
 
 app.listen(3000,()=>{
-    dbConnection()
+/*     dbConnection() */
 })
