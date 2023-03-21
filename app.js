@@ -46,6 +46,6 @@ app.get("/ses",(req,res)=>{
     res.send("ses 1 2 ")
 })
 
-app.listen(3001,()=>{
+app.listen(3000,()=>{
     dbConnection()
 })
