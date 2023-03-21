@@ -1,5 +1,6 @@
 const express=require("express")
-const mongoose = require("mongoose")
+const { dbConnection } = require("./src/db/db")
+const { TestModel } = require("./src/model/TestModel")
 const app = express()
 
 app.get("/",(req,res)=>{
@@ -10,7 +11,7 @@ app.get("/",(req,res)=>{
 
 })
 
-/* app.get("/add",async (req,res)=>{
+app.get("/add",async (req,res)=>{
 
    await TestModel.insertMany([{
         "name" : Math.random().toString(),
@@ -33,7 +34,7 @@ app.get("/getvalue",(req,res)=>{
         })
      })
 
-}) */
+})
 
 app.get("/test",(req,res)=>{
 
@@ -46,12 +47,5 @@ app.get("/ses",(req,res)=>{
 })
 
 app.listen(3000,()=>{
-    mongoose.connect("mongodb://localhost:27017/betdb")
-    const db=mongoose.connection
-
-    db.on("error",console.error.bind(console,"connection error"))
-    db.once("open",function(){
-        console.log("db connection is success")
-    })
-    console.log("server çalışıyorrr ===>")
+    dbConnection()
 })
