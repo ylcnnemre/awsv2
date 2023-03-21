@@ -1,5 +1,6 @@
 const express=require("express")
-
+/* const { dbConnection } = require("./src/db/db")
+const { TestModel } = require("./src/model/TestModel") */
 const app = express()
 
 app.get("/",(req,res)=>{
@@ -46,5 +47,5 @@ app.get("/ses",(req,res)=>{
 })
 
 app.listen(3000,()=>{
-/*     dbConnection() */
+    dbConnection()
 })
