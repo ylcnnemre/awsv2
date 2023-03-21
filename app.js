@@ -1,5 +1,5 @@
 const express=require("express")
-
+const mongoose = require("mongoose")
 const app = express()
 
 app.get("/",(req,res)=>{
@@ -46,12 +46,12 @@ app.get("/ses",(req,res)=>{
 })
 
 app.listen(3000,()=>{
-    /* mongoose.connect("mongodb://localhost:27017/betdb")
+    mongoose.connect("mongodb://localhost:27017/betdb")
     const db=mongoose.connection
 
     db.on("error",console.error.bind(console,"connection error"))
     db.once("open",function(){
         console.log("db connection is success")
-    }) */
+    })
     console.log("server çalışıyorrr ===>")
 })
