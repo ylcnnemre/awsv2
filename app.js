@@ -1,6 +1,5 @@
 const express=require("express")
-const { dbConnection } = require("./src/db/db")
-const { TestModel } = require("./src/model/TestModel")
+
 const app = express()
 
 app.get("/",(req,res)=>{
@@ -11,7 +10,7 @@ app.get("/",(req,res)=>{
 
 })
 
-app.get("/add",async (req,res)=>{
+/* app.get("/add",async (req,res)=>{
 
    await TestModel.insertMany([{
         "name" : Math.random().toString(),
@@ -35,7 +34,7 @@ app.get("/getvalue",(req,res)=>{
      })
 
 })
-
+ */
 app.get("/test",(req,res)=>{
 
     res.send("merhabadsads")
